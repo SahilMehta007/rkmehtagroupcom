@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RK Mehta Group | #1 Construction & Property Consultant in Solan, Himachal Pradesh</title>
+<meta name="description" content="Solan's most trusted construction & property consultant. 500+ projects. Build your dream home or find the perfect property in the sacred hills of Himachal Pradesh.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-dark: #06090f;
+    --bg-card: #0c1220;
+    --bg-card-hover: #111a2e;
+    --navy: #0b1a2e;
+    --navy-2: #10203a;
+    --gold: #c9a355;
+    --gold-light: #e4c66e;
+    --gold-glow: rgba(201,163,85,0.15);
+    --amber: #e8a838;
+    --emerald: #34d399;
+    --white: #ffffff;
+    --cream: #faf7f0;
+    --warm: #f5f0e8;
+    --text-primary: #ffffff;
+    --text-muted: rgba(255,255,255,0.55);
+    --text-faint: rgba(255,255,255,0.3);
+    --border: rgba(255,255,255,0.06);
+    --border-gold: rgba(201,163,85,0.15);
+    --glass: rgba(12,18,32,0.6);
+    --glass-light: rgba(255,255,255,0.03);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:'Outfit',sans-serif;background:var(--bg-dark);color:var(--text-primary);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* ═══════════ CUSTOM CURSOR ═══════════ */
+.cursor{width:20px;height:20px;border:2px solid var(--gold);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transition:transform 0.15s ease,opacity 0.15s;mix-blend-mode:difference;display:none}
+.cursor.active{transform:scale(2.5);opacity:0.5}
+@media(hover:hover){.cursor{display:block}}
+
+/* ═══════════ PRELOADER ═══════════ */
+.loader{position:fixed;inset:0;z-index:10000;background:var(--bg-dark);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.8s cubic-bezier(.4,0,.2,1),visibility 0.8s}
+.loader.done{opacity:0;visibility:hidden;pointer-events:none}
+.loader-logo{font-family:'Playfair Display',serif;font-size:2rem;font-weight:800;background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:loaderFade 1.5s ease-in-out infinite alternate}
+@keyframes loaderFade{0%{opacity:0.4}100%{opacity:1}}
+.loader-line{width:100px;height:1px;background:var(--border);margin-top:2rem;position:relative;overflow:hidden}
+.loader-line::after{content:'';position:absolute;left:0;top:0;height:100%;width:0;background:var(--gold);animation:loaderBar 1.5s ease forwards}
+@keyframes loaderBar{to{width:100%}}
+
+/* ═══════════ SCROLL PROGRESS ═══════════ */
+.scroll-progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--amber),var(--gold-light));z-index:1001;width:0;transition:width 0.1s}
+
+/* ═══════════ NAVBAR ═══════════ */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 2.5rem;transition:all 0.5s cubic-bezier(.4,0,.2,1)}
+nav.scrolled{background:rgba(6,9,15,0.9);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1400px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:80px}
+nav.scrolled .nav-inner{height:64px}
+.nav-brand{display:flex;align-items:center;gap:0.8rem}
+.nav-mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--gold),var(--amber));display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:1rem;color:var(--bg-dark);transition:transform 0.3s}
+.nav-mark:hover{transform:rotate(-5deg) scale(1.05)}
+.nav-brand-text span{display:block}
+.nav-brand-text .name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;letter-spacing:0.3px}
+.nav-brand-text .tagline{font-size:0.58rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);opacity:0.8}
+
+.nav-menu{display:flex;align-items:center;gap:2rem}
+.nav-menu a{font-size:0.82rem;font-weight:500;color:var(--text-muted);transition:color 0.3s;position:relative}
+.nav-menu a:hover{color:var(--white)}
+.nav-menu a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--gold);transition:width 0.3s}
+.nav-menu a:hover::after{width:100%}
+.nav-phone{display:flex;align-items:center;gap:0.4rem;color:var(--gold)!important;font-weight:700!important;font-size:0.85rem!important}
+.nav-btn{background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--bg-dark)!important;padding:0.5rem 1.2rem;border-radius:8px;font-weight:700!important;font-size:0.8rem!important;letter-spacing:0.5px;box-shadow:0 0 20px rgba(201,163,85,0.2);transition:all 0.3s!important}
+.nav-btn:hover{box-shadow:0 0 30px rgba(201,163,85,0.4)!important;transform:translateY(-1px)}
+.nav-btn::after{display:none!important}
+
+.burger{display:none;background:none;border:none;cursor:pointer;padding:4px;flex-direction:column;gap:5px}
+.burger span{width:24px;height:2px;background:var(--gold);border-radius:2px;transition:all 0.3s}
+
+/* ═══════════ HERO — CINEMATIC ═══════════ */
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;scale:1.1;animation:heroZoom 20s ease-in-out infinite alternate}
+@keyframes heroZoom{0%{scale:1.1;object-position:center}100%{scale:1.2;object-position:center 30%}}
+.hero-grad{position:absolute;inset:0;z-index:1;background:linear-gradient(160deg,rgba(6,9,15,0.95) 0%,rgba(6,9,15,0.8) 35%,rgba(6,9,15,0.55) 60%,rgba(6,9,15,0.8) 100%)}
+.hero-noise{position:absolute;inset:0;z-index:2;opacity:0.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")}
+
+.hero-orb{position:absolute;border-radius:50%;filter:blur(80px);z-index:1;animation:orbFloat 8s ease-in-out infinite alternate}
+.hero-orb.o1{width:500px;height:500px;background:rgba(201,163,85,0.08);top:-10%;right:10%;animation-delay:0s}
+.hero-orb.o2{width:400px;height:400px;background:rgba(52,211,153,0.04);bottom:0;left:5%;animation-delay:3s}
+.hero-orb.o3{width:300px;height:300px;background:rgba(232,168,56,0.06);top:30%;right:30%;animation-delay:5s}
+@keyframes orbFloat{0%{transform:translate(0,0)}100%{transform:translate(30px,-30px)}}
+
+.hero-inner{max-width:1400px;margin:auto;padding:10rem 2.5rem 6rem;width:100%;position:relative;z-index:3;display:grid;grid-template-columns:1.1fr 0.9fr;gap:5rem;align-items:center}
+
+.hero-anim{opacity:0;transform:translateY(40px);animation:heroReveal 0.9s cubic-bezier(.22,.61,.36,1) forwards}
+.hero-anim:nth-child(1){animation-delay:1.8s}
+.hero-anim:nth-child(2){animation-delay:2s}
+.hero-anim:nth-child(3){animation-delay:2.2s}
+.hero-anim:nth-child(4){animation-delay:2.4s}
+.hero-anim:nth-child(5){animation-delay:2.6s}
+@keyframes heroReveal{to{opacity:1;transform:translateY(0)}}
+
+.hero-chip{display:inline-flex;align-items:center;gap:0.6rem;padding:0.4rem 1rem;border-radius:100px;background:var(--gold-glow);border:1px solid var(--border-gold);margin-bottom:1.5rem;width:fit-content}
+.hero-chip .dot{width:6px;height:6px;background:var(--emerald);border-radius:50%;animation:chipPulse 2s infinite}
+@keyframes chipPulse{0%,100%{box-shadow:0 0 0 0 rgba(52,211,153,0.4)}50%{box-shadow:0 0 0 6px rgba(52,211,153,0)}}
+.hero-chip span{font-size:0.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+
+.hero h1{font-family:'Playfair Display',serif;font-size:4rem;font-weight:800;line-height:1.08;margin-bottom:1.5rem;letter-spacing:-0.5px}
+.hero h1 .glow{background:linear-gradient(135deg,var(--gold),var(--gold-light),var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200% 200%;animation:shimmer 4s ease infinite}
+@keyframes shimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+.hero-desc{font-size:1.1rem;color:var(--text-muted);line-height:1.8;margin-bottom:2.5rem;max-width:500px;font-weight:400}
+.hero-desc em{color:var(--gold);font-style:normal;font-weight:600}
+
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-glow{display:inline-flex;align-items:center;gap:0.6rem;padding:0.95rem 2rem;border-radius:12px;font-weight:700;font-size:0.9rem;letter-spacing:0.3px;transition:all 0.4s cubic-bezier(.4,0,.2,1);cursor:pointer;border:none;position:relative;overflow:hidden}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--bg-dark);box-shadow:0 0 30px rgba(201,163,85,0.25),0 0 60px rgba(201,163,85,0.1)}
+.btn-gold:hover{box-shadow:0 0 40px rgba(201,163,85,0.4),0 0 80px rgba(201,163,85,0.15);transform:translateY(-2px)}
+.btn-gold::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);transition:left 0.5s}
+.btn-gold:hover::after{left:100%}
+.btn-glass{background:var(--glass-light);color:var(--white);border:1px solid var(--border);backdrop-filter:blur(12px)}
+.btn-glass:hover{border-color:var(--gold);background:var(--gold-glow)}
+
+.hero-stats{display:flex;gap:2rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+.h-stat{flex:1}
+.h-stat-num{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.h-stat-label{font-size:0.68rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-faint);margin-top:0.2rem}
+
+.hero-right{display:flex;flex-direction:column;gap:1.2rem}
+.hero-glass{background:var(--glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:20px;overflow:hidden;display:grid;grid-template-columns:110px 1fr;transition:all 0.4s;cursor:pointer;position:relative}
+.hero-glass::before{content:'';position:absolute;inset:0;border-radius:20px;padding:1px;background:linear-gradient(135deg,var(--border-gold),transparent,var(--border-gold));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity 0.4s}
+.hero-glass:hover::before{opacity:1}
+.hero-glass:hover{transform:translateX(-8px) translateY(-2px);box-shadow:0 20px 50px rgba(0,0,0,0.3)}
+.hero-glass img{width:100%;height:100%;object-fit:cover;min-height:130px;transition:transform 0.5s}
+.hero-glass:hover img{transform:scale(1.05)}
+.hero-glass-body{padding:1.3rem 1.5rem;display:flex;flex-direction:column;justify-content:center}
+.hero-glass-label{font-size:0.6rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.3rem}
+.hero-glass-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;margin-bottom:0.35rem;line-height:1.3}
+.hero-glass-desc{font-size:0.78rem;color:var(--text-muted);line-height:1.5}
+.hero-glass-arrow{position:absolute;right:1.2rem;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:var(--gold-glow);border:1px solid var(--border-gold);display:flex;align-items:center;justify-content:center;opacity:0;transition:all 0.3s;color:var(--gold);font-size:0.9rem}
+.hero-glass:hover .hero-glass-arrow{opacity:1;right:1rem}
+
+/* ═══════════ MARQUEE TRUST STRIP ═══════════ */
+.trust-marquee{background:var(--bg-card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1rem 0;overflow:hidden;white-space:nowrap}
+.marquee-track{display:flex;gap:3rem;animation:marquee 30s linear infinite;width:max-content}
+.marquee-item{display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:var(--text-muted);font-weight:500;flex-shrink:0}
+.marquee-item strong{color:var(--gold);font-weight:700}
+.marquee-item .sep{width:4px;height:4px;background:var(--gold);border-radius:50%;opacity:0.4;margin-left:1rem}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ═══════════ SECTION STYLES ═══════════ */
+section{padding:7rem 2.5rem;position:relative}
+.sec-inner{max-width:1400px;margin:auto}
+.sec-label{font-size:0.65rem;font-weight:800;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;display:flex;align-items:center;gap:0.5rem}
+.sec-label::before{content:'';width:20px;height:1px;background:var(--gold)}
+.sec-title{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:800;line-height:1.1;margin-bottom:0.8rem;letter-spacing:-0.3px}
+.sec-desc{font-size:1rem;color:var(--text-muted);line-height:1.8;max-width:550px}
+.sec-header{margin-bottom:3.5rem}
+
+/* ═══════════ ABOUT ═══════════ */
+#about{background:var(--bg-dark)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-visual{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/5}
+.about-visual img{width:100%;height:100%;object-fit:cover;transition:transform 8s ease}
+.about-visual:hover img{transform:scale(1.05)}
+.about-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(6,9,15,0.6))}
+.about-float{position:absolute;bottom:24px;left:24px;right:24px;background:var(--glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:16px;padding:1.5rem;display:flex;gap:2rem;z-index:2}
+.about-float-stat{text-align:center;flex:1}
+.about-float-stat .num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:800;color:var(--gold)}
+.about-float-stat .lbl{font-size:0.65rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);margin-top:0.15rem}
+
+.about-story{font-family:'Playfair Display',serif;font-style:italic;font-size:1.15rem;color:var(--text-muted);line-height:1.8;border-left:2px solid var(--gold);padding-left:1.2rem;margin:1.5rem 0 2rem}
+.about-points{display:flex;flex-direction:column;gap:1rem}
+.a-point{display:flex;gap:1rem;align-items:flex-start;padding:1rem;border-radius:14px;border:1px solid var(--border);transition:all 0.3s;background:var(--glass-light)}
+.a-point:hover{border-color:var(--border-gold);background:var(--gold-glow)}
+.a-icon{flex-shrink:0;width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--gold-glow),transparent);border:1px solid var(--border-gold);display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+.a-point h4{font-size:0.9rem;font-weight:700;margin-bottom:0.15rem}
+.a-point p{font-size:0.8rem;color:var(--text-muted);line-height:1.5}
+
+/* ═══════════ SERVICES — BENTO GRID ═══════════ */
+#services{background:var(--bg-card)}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:min-content;gap:1.2rem}
+.bento-card{background:var(--bg-dark);border:1px solid var(--border);border-radius:20px;padding:2rem;position:relative;overflow:hidden;transition:all 0.4s}
+.bento-card:hover{border-color:var(--border-gold);transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,0.2)}
+.bento-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity 0.4s}
+.bento-card:hover::before{opacity:1}
+.b-span-8{grid-column:span 8}
+.b-span-4{grid-column:span 4}
+.b-span-6{grid-column:span 6}
+.bento-label{font-size:0.6rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;display:flex;align-items:center;gap:0.5rem}
+.bento-card h3{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:0.5rem;line-height:1.3}
+.bento-card p{font-size:0.85rem;color:var(--text-muted);line-height:1.6}
+.bento-icon{font-size:2rem;margin-bottom:1rem}
+.bento-list{list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin-top:1rem}
+.bento-list li{display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:var(--text-muted);padding:0.5rem 0.8rem;border-radius:8px;background:var(--glass-light);border:1px solid var(--border);transition:all 0.3s}
+.bento-list li:hover{border-color:var(--border-gold);background:var(--gold-glow)}
+.bento-list li .li-icon{font-size:1rem}
+.bento-feature{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.bento-feature img{width:100%;height:250px;object-fit:cover;border-radius:14px}
+
+/* ═══════════ SOLAN SECTION ═══════════ */
+#solan{padding:0;min-height:550px;display:flex;align-items:center;overflow:hidden;position:relative}
+.solan-bg{position:absolute;inset:0}
+.solan-bg img{width:100%;height:100%;object-fit:cover}
+.solan-grad{position:absolute;inset:0;background:linear-gradient(110deg,rgba(6,9,15,0.95) 0%,rgba(6,9,15,0.75) 45%,rgba(6,9,15,0.3) 100%)}
+.solan-content{position:relative;z-index:2;max-width:580px;padding:5rem 2.5rem;margin-left:5%}
+.solan-content .sec-title{font-size:2.4rem}
+.solan-content p{font-size:0.95rem;color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem}
+.solan-tags{display:flex;gap:0.6rem;flex-wrap:wrap}
+.solan-tag{display:flex;align-items:center;gap:0.4rem;font-size:0.78rem;font-weight:600;color:var(--text-muted);background:var(--glass);backdrop-filter:blur(8px);border:1px solid var(--border);padding:0.4rem 0.9rem;border-radius:100px;transition:all 0.3s}
+.solan-tag:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ═══════════ PROPERTIES ═══════════ */
+#properties{background:var(--bg-dark)}
+.props-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.prop-card{background:var(--bg-card);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:all 0.5s cubic-bezier(.4,0,.2,1);position:relative}
+.prop-card:hover{transform:translateY(-10px);box-shadow:0 30px 60px rgba(0,0,0,0.3);border-color:var(--border-gold)}
+.prop-img{position:relative;height:220px;overflow:hidden}
+.prop-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s}
+.prop-card:hover .prop-img img{transform:scale(1.08)}
+.prop-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(6,9,15,0.7))}
+.prop-badge{position:absolute;top:14px;left:14px;z-index:2;padding:0.3rem 0.8rem;border-radius:8px;font-size:0.65rem;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.badge-fire{background:linear-gradient(135deg,#ef4444,#dc2626);color:white}
+.badge-new{background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--bg-dark)}
+.badge-limited{background:linear-gradient(135deg,var(--amber),#f59e0b);color:var(--bg-dark);animation:pulseB 2s infinite}
+@keyframes pulseB{0%,100%{opacity:1}50%{opacity:0.7}}
+.prop-body{padding:1.5rem 1.8rem}
+.prop-type{font-size:0.62rem;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.3rem}
+.prop-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;margin-bottom:0.3rem}
+.prop-loc{font-size:0.8rem;color:var(--text-faint);margin-bottom:1rem;display:flex;align-items:center;gap:0.3rem}
+.prop-chips{display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:1rem}
+.prop-chip{font-size:0.68rem;font-weight:600;color:var(--text-muted);background:var(--glass-light);border:1px solid var(--border);padding:0.25rem 0.6rem;border-radius:6px}
+.prop-foot{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;border-top:1px solid var(--border)}
+.prop-price{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--gold)}
+.prop-enquire{font-size:0.75rem;font-weight:700;color:var(--bg-dark);background:var(--gold);padding:0.4rem 1rem;border-radius:8px;transition:all 0.3s;display:inline-flex;align-items:center;gap:0.3rem}
+.prop-enquire:hover{background:var(--gold-light);transform:translateX(2px)}
+
+/* ═══════════ GALLERY ═══════════ */
+#gallery{background:var(--bg-card)}
+.gallery-masonry{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:1rem}
+.g-item{border-radius:16px;overflow:hidden;position:relative;cursor:pointer}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s}
+.g-item:hover img{transform:scale(1.1)}
+.g-item.span-2c{grid-column:span 2}
+.g-item.span-2r{grid-row:span 2}
+.g-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(6,9,15,0.9));padding:1.2rem;display:flex;flex-direction:column;justify-content:flex-end;opacity:0;transition:opacity 0.4s}
+.g-item:hover .g-overlay{opacity:1}
+.g-tag{display:inline-block;background:var(--gold);color:var(--bg-dark);padding:0.15rem 0.5rem;border-radius:4px;font-size:0.58rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;width:fit-content;margin-bottom:0.3rem}
+.g-overlay h4{font-size:0.95rem;font-weight:700}
+.g-overlay p{font-size:0.72rem;color:var(--text-muted)}
+
+/* ═══════════ TESTIMONIALS ═══════════ */
+#testimonials{background:var(--bg-dark)}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.test-card{background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:2rem;transition:all 0.4s;position:relative;overflow:hidden}
+.test-card:hover{border-color:var(--border-gold);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,0.2)}
+.test-card::before{content:'\201C';font-family:'Playfair Display',serif;font-size:5rem;color:var(--gold);opacity:0.08;position:absolute;top:0;right:16px;line-height:1}
+.test-stars{color:var(--gold);font-size:0.8rem;letter-spacing:2px;margin-bottom:1rem}
+.test-card blockquote{font-size:0.9rem;color:var(--text-muted);line-height:1.75;margin-bottom:1.5rem;font-style:italic}
+.test-author{display:flex;align-items:center;gap:0.75rem}
+.test-av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--amber));display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--bg-dark);font-size:0.85rem}
+.test-name{font-weight:700;font-size:0.88rem}
+.test-role{font-size:0.72rem;color:var(--text-faint)}
+
+/* ═══════════ WHY US ═══════════ */
+#why{background:var(--bg-card)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.why-card{text-align:center;padding:2.5rem 1.5rem;background:var(--bg-dark);border:1px solid var(--border);border-radius:20px;transition:all 0.4s;position:relative;overflow:hidden}
+.why-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--amber));transform:scaleX(0);transition:transform 0.4s}
+.why-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(0,0,0,0.2);border-color:var(--border-gold)}
+.why-card:hover::after{transform:scaleX(1)}
+.why-ico{width:60px;height:60px;margin:0 auto 1.2rem;background:linear-gradient(135deg,var(--gold-glow),transparent);border:1px solid var(--border-gold);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.5rem}
+.why-card h3{font-size:0.95rem;font-weight:700;margin-bottom:0.4rem}
+.why-card p{font-size:0.8rem;color:var(--text-muted);line-height:1.6}
+
+/* ═══════════ MEGA CTA ═══════════ */
+.mega-cta{padding:6rem 2.5rem;text-align:center;position:relative;overflow:hidden;background:var(--bg-dark)}
+.mega-cta-orb{position:absolute;width:600px;height:600px;border-radius:50%;filter:blur(120px);top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(201,163,85,0.08),transparent 70%)}
+.mega-cta-inner{max-width:650px;margin:auto;position:relative;z-index:1}
+.cta-free{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(52,211,153,0.1);border:1px solid rgba(52,211,153,0.2);color:var(--emerald);padding:0.35rem 1rem;border-radius:100px;font-size:0.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.5rem}
+.mega-cta h2{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:800;margin-bottom:1rem;line-height:1.1}
+.mega-cta p{font-size:1rem;color:var(--text-muted);line-height:1.8;margin-bottom:0.5rem}
+.mega-cta .response-time{font-size:0.78rem;color:var(--text-faint);margin-bottom:2.5rem}
+.mega-cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* ═══════════ CONTACT ═══════════ */
+#contact{background:var(--bg-card)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:3rem}
+.c-cards{display:flex;flex-direction:column;gap:0.8rem}
+.c-card{display:flex;gap:1rem;align-items:flex-start;padding:1.2rem;background:var(--bg-dark);border:1px solid var(--border);border-radius:14px;transition:all 0.3s}
+.c-card:hover{border-color:var(--border-gold)}
+.c-ico{flex-shrink:0;width:44px;height:44px;border-radius:12px;background:var(--gold-glow);border:1px solid var(--border-gold);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.c-card h4{font-size:0.88rem;font-weight:700;margin-bottom:0.1rem}
+.c-card p{font-size:0.8rem;color:var(--text-muted);line-height:1.5}
+.c-card a{color:var(--gold);font-weight:600}
+
+.contact-form{background:var(--bg-dark);border:1px solid var(--border);border-radius:20px;padding:2.5rem}
+.contact-form h3{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:0.3rem}
+.contact-form .f-sub{font-size:0.82rem;color:var(--text-faint);margin-bottom:1.5rem}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.f-group{margin-bottom:1rem}
+.f-group label{display:block;font-size:0.72rem;font-weight:700;letter-spacing:0.5px;color:var(--text-muted);margin-bottom:0.3rem}
+.f-group input,.f-group select,.f-group textarea{width:100%;padding:0.75rem 1rem;background:var(--bg-card);border:1px solid var(--border);border-radius:10px;color:var(--white);font-size:0.88rem;font-family:'Outfit',sans-serif;transition:all 0.3s}
+.f-group input:focus,.f-group select:focus,.f-group textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-glow)}
+.f-group textarea{resize:vertical;min-height:80px}
+.f-group select option{background:var(--bg-card);color:var(--white)}
+.f-submit{width:100%;padding:0.95rem;background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--bg-dark);border:none;border-radius:12px;font-size:0.92rem;font-weight:800;cursor:pointer;font-family:'Outfit',sans-serif;transition:all 0.3s;letter-spacing:0.5px;position:relative;overflow:hidden}
+.f-submit:hover{box-shadow:0 0 30px rgba(201,163,85,0.3);transform:translateY(-1px)}
+.f-submit::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent);transition:left 0.5s}
+.f-submit:hover::after{left:100%}
+#formOk{display:none;text-align:center;padding:3rem 1rem}
+#formOk .check{font-size:3rem;margin-bottom:1rem}
+#formOk h3{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:0.3rem}
+#formOk p{color:var(--text-muted);font-size:0.88rem}
+
+/* ═══════════ FOOTER ═══════════ */
+footer{background:var(--bg-dark);border-top:1px solid var(--border);padding:4rem 2.5rem 2rem}
+.foot-inner{max-width:1400px;margin:auto}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border)}
+.foot-brand .f-logo{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;color:var(--gold);margin-bottom:0.8rem}
+.foot-brand p{font-size:0.82rem;color:var(--text-muted);line-height:1.7}
+footer h4{font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem}
+.fl{list-style:none;display:flex;flex-direction:column;gap:0.4rem}
+.fl a{font-size:0.82rem;color:var(--text-faint);transition:color 0.3s}
+.fl a:hover{color:var(--gold)}
+.fc{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.fc li{font-size:0.82rem;color:var(--text-faint);display:flex;align-items:center;gap:0.4rem}
+.fc a{color:var(--text-faint);transition:color 0.3s}
+.fc a:hover{color:var(--gold)}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:2rem;font-size:0.75rem;color:var(--text-faint)}
+
+/* ═══════════ FLOATS ═══════════ */
+.fl-wa{position:fixed;bottom:24px;right:24px;z-index:999}
+.fl-wa a{display:flex;align-items:center;gap:0.6rem;background:#25D366;color:white;padding:0.85rem 1.5rem;border-radius:100px;font-weight:700;font-size:0.85rem;box-shadow:0 4px 25px rgba(37,211,102,0.3);transition:all 0.3s}
+.fl-wa a:hover{transform:translateY(-3px);box-shadow:0 8px 35px rgba(37,211,102,0.5)}
+.fl-call{position:fixed;bottom:24px;left:24px;z-index:999}
+.fl-call a{display:flex;align-items:center;gap:0.5rem;background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--bg-dark);padding:0.85rem 1.5rem;border-radius:100px;font-weight:800;font-size:0.85rem;box-shadow:0 0 25px rgba(201,163,85,0.3);transition:all 0.3s}
+.fl-call a:hover{transform:scale(1.05);box-shadow:0 0 35px rgba(201,163,85,0.45)}
+
+/* ═══════════ REVEALS ═══════════ */
+.rv{opacity:0;transform:translateY(50px);transition:all 0.8s cubic-bezier(.22,.61,.36,1)}
+.rv.vis{opacity:1;transform:translateY(0)}
+.rv-l{opacity:0;transform:translateX(-50px);transition:all 0.8s cubic-bezier(.22,.61,.36,1)}
+.rv-l.vis{opacity:1;transform:translateX(0)}
+.rv-r{opacity:0;transform:translateX(50px);transition:all 0.8s cubic-bezier(.22,.61,.36,1)}
+.rv-r.vis{opacity:1;transform:translateX(0)}
+
+/* ═══════════ RESPONSIVE ═══════════ */
+@media(max-width:1024px){
+    .hero-inner{grid-template-columns:1fr}.hero-right{display:none}.hero h1{font-size:3rem}
+    .about-grid{grid-template-columns:1fr}
+    .b-span-8,.b-span-4,.b-span-6{grid-column:span 6}
+    .props-grid{grid-template-columns:repeat(2,1fr)}
+    .gallery-masonry{grid-template-columns:repeat(2,1fr)}
+    .test-grid{grid-template-columns:repeat(2,1fr)}
+    .why-grid{grid-template-columns:repeat(2,1fr)}
+    .contact-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+    .nav-menu{display:none}
+    .nav-menu.open{display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:rgba(6,9,15,0.98);backdrop-filter:blur(30px);padding:1.5rem 2.5rem;gap:1rem;border-top:1px solid var(--border)}
+    .burger{display:flex}
+    nav{padding:0 1.5rem}
+    .hero-inner{padding:8rem 1.5rem 4rem}.hero h1{font-size:2.2rem}
+    .hero-stats{flex-wrap:wrap;gap:1.2rem}.h-stat-num{font-size:1.8rem}
+    section{padding:4rem 1.5rem}.sec-title{font-size:2rem}
+    .b-span-8,.b-span-4,.b-span-6{grid-column:span 12}
+    .bento-feature{grid-template-columns:1fr}
+    .props-grid{grid-template-columns:1fr}
+    .gallery-masonry{grid-template-columns:1fr 1fr}
+    .g-item.span-2c{grid-column:span 1}
+    .test-grid{grid-template-columns:1fr}
+    .why-grid{grid-template-columns:1fr 1fr}
+    .f-row{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr;gap:2rem}
+    .foot-bottom{flex-direction:column;gap:0.5rem;text-align:center}
+    .solan-content{margin:auto;text-align:center;padding:4rem 1.5rem}
+    .solan-tags{justify-content:center}
+    .mega-cta h2{font-size:1.9rem}
+    .about-float{gap:1rem;flex-wrap:wrap}
+}
+@media(max-width:480px){.hero h1{font-size:1.8rem}.why-grid{grid-template-columns:1fr}.about-float{flex-direction:column;align-items:center}}
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<div class="loader" id="loader">
+    <div class="loader-logo">RK Mehta Group</div>
+    <div class="loader-line"></div>
+</div>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav id="nav">
+    <div class="nav-inner">
+        <a href="#hero" class="nav-brand">
+            <div class="nav-mark">RK</div>
+            <div class="nav-brand-text">
+                <span class="name">RK Mehta Group</span>
+                <span class="tagline">Build &bull; Invest &bull; Grow</span>
+            </div>
+        </a>
+        <div class="nav-menu" id="navMenu">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#properties">Properties</a>
+            <a href="#gallery">Projects</a>
+            <a href="#testimonials">Reviews</a>
+            <a href="tel:+919816008127" class="nav-phone">&#128222; 98160 08127</a>
+            <a href="#contact" class="nav-btn">Free Consultation</a>
+        </div>
+        <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="hero">
+    <div class="hero-media"><img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1920&q=80" alt="Himalayan mountains Solan"></div>
+    <div class="hero-grad"></div>
+    <div class="hero-noise"></div>
+    <div class="hero-orb o1"></div>
+    <div class="hero-orb o2"></div>
+    <div class="hero-orb o3"></div>
+
+    <div class="hero-inner">
+        <div class="hero-left">
+            <div class="hero-chip hero-anim"><span class="dot"></span><span>Solan's #1 Trusted Name &mdash; 20+ Years</span></div>
+            <h1 class="hero-anim">Build Your <span class="glow">Dream Home</span> in the Sacred Hills of <span class="glow">Solan</span></h1>
+            <p class="hero-desc hero-anim">From laying the foundation of your <em>dream home</em> to finding the <em>perfect property</em> in Himachal's most blessed land &mdash; we make it happen with honesty, quality, and 20+ years of trust.</p>
+            <div class="hero-ctas hero-anim">
+                <a href="tel:+919816008127" class="btn-glow btn-gold"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.72 11.72 0 003.66.59 1 1 0 011 1v3.6a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.6a1 1 0 011 1 11.72 11.72 0 00.59 3.66 1 1 0 01-.24 1.01l-2.33 2.12z"/></svg> Call Now &mdash; Free Advice</a>
+                <a href="https://wa.me/919816008127?text=Hi%20Rakesh%20ji%2C%20I%20found%20your%20website.%20I%27m%20interested%20in%20your%20services." class="btn-glow btn-glass" target="_blank" rel="noopener">&#128172; WhatsApp Instantly</a>
+            </div>
+            <div class="hero-stats hero-anim">
+                <div class="h-stat"><div class="h-stat-num" data-target="500">0+</div><div class="h-stat-label">Projects Done</div></div>
+                <div class="h-stat"><div class="h-stat-num" data-target="20">0+</div><div class="h-stat-label">Years Experience</div></div>
+                <div class="h-stat"><div class="h-stat-num" data-target="350">0+</div><div class="h-stat-label">Happy Families</div></div>
+                <div class="h-stat"><div class="h-stat-num" data-target="100">0%</div><div class="h-stat-label">Trust Rate</div></div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-glass hero-anim" style="animation-delay:2.8s">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=75" alt="Construction">
+                <div class="hero-glass-body">
+                    <div class="hero-glass-label">Construction</div>
+                    <div class="hero-glass-title">RK Mehta Constructions</div>
+                    <div class="hero-glass-desc">Premium homes & commercial spaces. Foundation to finishing.</div>
+                </div>
+                <div class="hero-glass-arrow">&#8594;</div>
+            </div>
+            <div class="hero-glass hero-anim" style="animation-delay:3s">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=75" alt="Property">
+                <div class="hero-glass-body">
+                    <div class="hero-glass-label">Properties</div>
+                    <div class="hero-glass-title">Solan Property Consultant</div>
+                    <div class="hero-glass-desc">Plots, flats, villas & commercial &mdash; the best in Solan.</div>
+                </div>
+                <div class="hero-glass-arrow">&#8594;</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ TRUST MARQUEE ═══ -->
+<div class="trust-marquee">
+    <div class="marquee-track">
+        <div class="marquee-item"><strong>500+</strong> Projects Delivered <span class="sep"></span></div>
+        <div class="marquee-item">&#128591; Blessed by Shoolini Devi <span class="sep"></span></div>
+        <div class="marquee-item">&#128205; Based in <strong>Solan, HP</strong> <span class="sep"></span></div>
+        <div class="marquee-item">&#128274; <strong>100%</strong> Transparent Deals <span class="sep"></span></div>
+        <div class="marquee-item">&#128222; Free Consultation <span class="sep"></span></div>
+        <div class="marquee-item">&#9968; <strong>20+ Years</strong> of Trust <span class="sep"></span></div>
+        <div class="marquee-item">&#127968; Residential &amp; Commercial <span class="sep"></span></div>
+        <div class="marquee-item">&#127793; In the Heart of Himachal <span class="sep"></span></div>
+        <div class="marquee-item"><strong>500+</strong> Projects Delivered <span class="sep"></span></div>
+        <div class="marquee-item">&#128591; Blessed by Shoolini Devi <span class="sep"></span></div>
+        <div class="marquee-item">&#128205; Based in <strong>Solan, HP</strong> <span class="sep"></span></div>
+        <div class="marquee-item">&#128274; <strong>100%</strong> Transparent Deals <span class="sep"></span></div>
+        <div class="marquee-item">&#128222; Free Consultation <span class="sep"></span></div>
+        <div class="marquee-item">&#9968; <strong>20+ Years</strong> of Trust <span class="sep"></span></div>
+        <div class="marquee-item">&#127968; Residential &amp; Commercial <span class="sep"></span></div>
+        <div class="marquee-item">&#127793; In the Heart of Himachal <span class="sep"></span></div>
+    </div>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+    <div class="sec-inner">
+        <div class="about-grid">
+            <div class="about-visual rv-l">
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&q=80" alt="Construction in Solan">
+                <div class="about-float">
+                    <div class="about-float-stat"><div class="num">500+</div><div class="lbl">Projects</div></div>
+                    <div class="about-float-stat"><div class="num">20+</div><div class="lbl">Years</div></div>
+                    <div class="about-float-stat"><div class="num">350+</div><div class="lbl">Families</div></div>
+                </div>
+            </div>
+            <div class="rv-r">
+                <div class="sec-label">Our Story</div>
+                <div class="sec-title">Built on Faith.<br>Rooted in Solan.</div>
+                <p class="about-story">"What started as one man's commitment to quality construction has grown into Solan's most trusted name &mdash; blessed by the sacred hills and strengthened by the trust of hundreds of families."</p>
+                <div class="about-points">
+                    <div class="a-point"><div class="a-icon">&#127959;</div><div><h4>RK Mehta Constructions</h4><p>Complete construction &mdash; residential, commercial, renovation, interiors. Every brick placed with care.</p></div></div>
+                    <div class="a-point"><div class="a-icon">&#128204;</div><div><h4>Solan Property Consultant</h4><p>Your guide to the best properties in Solan. Plots, flats, villas, commercial &mdash; handpicked and verified.</p></div></div>
+                    <div class="a-point"><div class="a-icon">&#128591;</div><div><h4>Values We Live By</h4><p>Honesty, transparency, and on-time delivery. We treat every project as if building for our own family.</p></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section id="services">
+    <div class="sec-inner">
+        <div class="sec-header rv"><div class="sec-label">What We Offer</div><div class="sec-title">Two Businesses. One Roof.<br>Your Complete Solution.</div></div>
+        <div class="bento rv">
+            <div class="bento-card b-span-8"><div class="bento-feature"><div><div class="bento-label">&#127959; Construction</div><h3>RK Mehta Constructions</h3><p>From residential villas to commercial complexes &mdash; we build spaces that last generations. Premium materials, modern design, earthquake-resistant structures.</p><ul class="bento-list"><li><span class="li-icon">&#127960;</span> Residential Construction</li><li><span class="li-icon">&#127963;</span> Commercial Buildings</li><li><span class="li-icon">&#128295;</span> Renovation &amp; Remodeling</li></ul></div><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=75" alt="Modern construction"></div></div>
+            <div class="bento-card b-span-4"><div class="bento-icon">&#127912;</div><h3>Interior Design</h3><p>Stunning interiors that reflect your personality. From concept to execution, we create beautiful living spaces.</p></div>
+            <div class="bento-card b-span-4"><div class="bento-icon">&#128208;</div><h3>Architecture &amp; Approvals</h3><p>Professional planning, 3D visualization, and government approval assistance for smooth execution.</p></div>
+            <div class="bento-card b-span-8"><div class="bento-feature"><div><div class="bento-label">&#127968; Property Consultancy</div><h3>Solan Property Consultant</h3><p>Your trusted partner in finding the perfect property in Solan. From scenic plots to ready-to-move flats &mdash; we've got the best options curated for you.</p><ul class="bento-list"><li><span class="li-icon">&#128205;</span> Residential Plots</li><li><span class="li-icon">&#127970;</span> Flats &amp; Apartments</li><li><span class="li-icon">&#128178;</span> Commercial Properties</li></ul></div><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=75" alt="Beautiful property"></div></div>
+            <div class="bento-card b-span-6"><div class="bento-icon">&#128221;</div><h3>Legal &amp; Documentation</h3><p>Complete registry, verification, and documentation support. Hassle-free property transactions with full legal backing.</p></div>
+            <div class="bento-card b-span-6"><div class="bento-icon">&#128202;</div><h3>Investment Advisory</h3><p>Expert guidance on where to invest in Solan's booming real estate market. Maximize returns with our 20+ years of local knowledge.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ SOLAN ═══ -->
+<section id="solan">
+    <div class="solan-bg"><img src="https://images.unsplash.com/photo-1597074866923-dc0589150358?w=1920&q=80" alt="Himachal Pradesh temple mountains"></div>
+    <div class="solan-grad"></div>
+    <div class="solan-content">
+        <div class="sec-label">&#128591; The Blessed Land</div>
+        <div class="sec-title">Solan &mdash; Where<br>Divinity Meets Opportunity</div>
+        <p>Nestled in the sacred Shivalik hills, Solan is blessed by Shoolini Devi &mdash; the city's guardian deity. With serene temples, pine-covered mountains, and rapidly growing infrastructure, it's Himachal's most promising destination.</p>
+        <div class="solan-tags">
+            <div class="solan-tag">&#9968; Shoolini Temple</div>
+            <div class="solan-tag">&#127956; Himalayan Views</div>
+            <div class="solan-tag">&#127793; Clean Air</div>
+            <div class="solan-tag">&#128200; Investment Hub</div>
+            <div class="solan-tag">&#128652; NH-5 Connected</div>
+            <div class="solan-tag">&#127979; Top Universities</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ PROPERTIES ═══ -->
+<section id="properties">
+    <div class="sec-inner">
+        <div class="sec-header rv"><div class="sec-label">&#128293; Hot Listings</div><div class="sec-title">Featured Properties in Solan</div><p class="sec-desc">Handpicked opportunities &mdash; these won't last long.</p></div>
+        <div class="props-grid rv">
+            <div class="prop-card">
+                <div class="prop-img"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=700&q=75" alt="Plot Solan"><span class="prop-badge badge-fire">&#128293; High Demand</span></div>
+                <div class="prop-body"><div class="prop-type">Residential Plot</div><h3>Premium Plot &mdash; Chambaghat</h3><div class="prop-loc">&#128205; Chambaghat, Solan</div><div class="prop-chips"><span class="prop-chip">200 Sq Yards</span><span class="prop-chip">Mountain View</span><span class="prop-chip">Road Access</span></div><div class="prop-foot"><div class="prop-price">Contact for Price</div><a href="https://wa.me/919816008127?text=Hi%2C%20interested%20in%20Chambaghat%20plot" class="prop-enquire" target="_blank" rel="noopener">Enquire &#8594;</a></div></div>
+            </div>
+            <div class="prop-card">
+                <div class="prop-img"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&q=75" alt="Flat Solan"><span class="prop-badge badge-new">New Listing</span></div>
+                <div class="prop-body"><div class="prop-type">Apartment</div><h3>3 BHK Flat &mdash; Mall Road</h3><div class="prop-loc">&#128205; Near Mall Road, Solan</div><div class="prop-chips"><span class="prop-chip">3 BHK</span><span class="prop-chip">1200 Sq Ft</span><span class="prop-chip">Parking</span></div><div class="prop-foot"><div class="prop-price">Contact for Price</div><a href="https://wa.me/919816008127?text=Hi%2C%20interested%20in%20the%203BHK%20Mall%20Road%20flat" class="prop-enquire" target="_blank" rel="noopener">Enquire &#8594;</a></div></div>
+            </div>
+            <div class="prop-card">
+                <div class="prop-img"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=75" alt="Villa Solan"><span class="prop-badge badge-limited">&#9888; Only 2 Left</span></div>
+                <div class="prop-body"><div class="prop-type">Villa</div><h3>Luxury Villa &mdash; Rajgarh Road</h3><div class="prop-loc">&#128205; Rajgarh Road, Solan</div><div class="prop-chips"><span class="prop-chip">4 BHK</span><span class="prop-chip">2500 Sq Ft</span><span class="prop-chip">Garden</span></div><div class="prop-foot"><div class="prop-price">Contact for Price</div><a href="https://wa.me/919816008127?text=Hi%2C%20interested%20in%20the%20Rajgarh%20villa" class="prop-enquire" target="_blank" rel="noopener">Enquire &#8594;</a></div></div>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:2.5rem"><a href="https://wa.me/919816008127?text=Hi%2C%20show%20me%20all%20available%20properties%20in%20Solan" class="btn-glow btn-gold" target="_blank" rel="noopener">&#128172; View All Properties on WhatsApp</a></div>
+    </div>
+</section>
+
+<!-- ═══ GALLERY ═══ -->
+<section id="gallery">
+    <div class="sec-inner">
+        <div class="sec-header rv"><div class="sec-label">Our Work</div><div class="sec-title">Construction Gallery</div></div>
+        <div class="gallery-masonry rv">
+            <div class="g-item span-2c"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=75" alt="Villa"><div class="g-overlay"><span class="g-tag">Residential</span><h4>Modern Villa &mdash; Solan</h4><p>3,500 sq.ft luxury home</p></div></div>
+            <div class="g-item span-2r"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=75" alt="Interior"><div class="g-overlay"><span class="g-tag">Interior</span><h4>Premium Interiors</h4><p>Designer living space</p></div></div>
+            <div class="g-item"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=75" alt="Commercial"><div class="g-overlay"><span class="g-tag">Commercial</span><h4>Shopping Complex</h4><p>12-shop complex</p></div></div>
+            <div class="g-item"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=75" alt="Renovation"><div class="g-overlay"><span class="g-tag">Renovation</span><h4>Heritage Restoration</h4></div></div>
+            <div class="g-item"><img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=75" alt="Apartment"><div class="g-overlay"><span class="g-tag">Residential</span><h4>Apartment Complex</h4></div></div>
+            <div class="g-item span-2c"><img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=75" alt="Luxury estate"><div class="g-overlay"><span class="g-tag">Luxury</span><h4>Hill-Top Estate</h4><p>Panoramic Himalayan views</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section id="testimonials">
+    <div class="sec-inner">
+        <div class="sec-header rv"><div class="sec-label">&#11088; Client Stories</div><div class="sec-title">Trusted by Hundreds</div></div>
+        <div class="test-grid rv">
+            <div class="test-card"><div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Rakesh ji didn't just build our house &mdash; he built our dream. Every detail was perfect, delivered on time and within budget. Our whole family prays for his success."</blockquote><div class="test-author"><div class="test-av">AK</div><div><div class="test-name">Amit Kumar</div><div class="test-role">Homeowner, Solan</div></div></div></div>
+            <div class="test-card"><div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"We were buying from Delhi and worried about getting cheated. They made everything transparent &mdash; from site visits to registry. Now we own our dream plot!"</blockquote><div class="test-author"><div class="test-av">PS</div><div><div class="test-name">Priya Sharma</div><div class="test-role">Investor, Delhi</div></div></div></div>
+            <div class="test-card"><div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Got my shop constructed and invested in a plot through them. Having both services from one team made everything incredibly smooth. Best in Solan!"</blockquote><div class="test-author"><div class="test-av">RV</div><div><div class="test-name">Rajesh Verma</div><div class="test-role">Business Owner, Solan</div></div></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ WHY US ═══ -->
+<section id="why">
+    <div class="sec-inner">
+        <div class="sec-header rv"><div class="sec-label">The Difference</div><div class="sec-title">Why Families Choose Us</div></div>
+        <div class="why-grid rv">
+            <div class="why-card"><div class="why-ico">&#128170;</div><h3>20+ Years in Solan</h3><p>We know every road, every neighborhood, every opportunity. Unmatched local expertise.</p></div>
+            <div class="why-card"><div class="why-ico">&#128591;</div><h3>Honest &amp; Transparent</h3><p>No hidden costs, no surprises. Business done the right way &mdash; with integrity and faith.</p></div>
+            <div class="why-card"><div class="why-ico">&#127775;</div><h3>Premium Quality</h3><p>Best materials, skilled craftsmen, earthquake-resistant designs. Quality in every wall.</p></div>
+            <div class="why-card"><div class="why-ico">&#9201;</div><h3>On-Time Delivery</h3><p>We respect your time. Every project delivered on schedule, no excuses.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ MEGA CTA ═══ -->
+<div class="mega-cta">
+    <div class="mega-cta-orb"></div>
+    <div class="mega-cta-inner rv">
+        <div class="cta-free">&#127873; 100% Free &mdash; No Obligation</div>
+        <h2>Ready to Build Your Dream<br>or Find the Perfect Property?</h2>
+        <p>Talk directly with Rakesh Mehta. Share your requirements, get honest guidance. No pressure.</p>
+        <div class="response-time">&#128337; Response within 1 hour during business hours</div>
+        <div class="mega-cta-btns">
+            <a href="tel:+919816008127" class="btn-glow btn-gold">&#128222; Call: +91 98160 08127</a>
+            <a href="https://wa.me/919816008127?text=Hi%20Rakesh%20ji%2C%20I%20want%20a%20free%20consultation." class="btn-glow btn-glass" target="_blank" rel="noopener">&#128172; WhatsApp Us</a>
+        </div>
+    </div>
+</div>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact">
+    <div class="sec-inner">
+        <div class="sec-header rv"><div class="sec-label">Reach Out</div><div class="sec-title">Let's Talk About<br>Your Next Project</div></div>
+        <div class="contact-grid rv">
+            <div class="c-cards">
+                <div class="c-card"><div class="c-ico">&#128222;</div><div><h4>Call Us</h4><p><a href="tel:+919816008127">+91 98160 08127</a><br><span style="font-size:0.72rem;color:var(--text-faint)">Mon-Sat, 9AM - 7PM</span></p></div></div>
+                <div class="c-card"><div class="c-ico">&#128172;</div><div><h4>WhatsApp (Fastest)</h4><p><a href="https://wa.me/919816008127" target="_blank" rel="noopener">+91 98160 08127</a><br><span style="font-size:0.72rem;color:var(--text-faint)">Send photos, share requirements</span></p></div></div>
+                <div class="c-card"><div class="c-ico">&#128205;</div><div><h4>Visit Us</h4><p>Solan, Himachal Pradesh<br>India &mdash; 173212</p></div></div>
+                <div class="c-card"><div class="c-ico">&#127760;</div><div><h4>Our Businesses</h4><p><strong style="color:var(--gold)">RK Mehta Constructions</strong><br><strong style="color:var(--gold)">Solan Property Consultant</strong></p></div></div>
+            </div>
+            <div class="contact-form">
+                <h3>Send Your Requirement</h3>
+                <p class="f-sub">We'll respond within hours. No spam.</p>
+                <form id="cForm" onsubmit="submitForm(event)">
+                    <div class="f-row"><div class="f-group"><label>Full Name *</label><input type="text" id="fname" placeholder="Your Name" required></div><div class="f-group"><label>Phone *</label><input type="tel" id="fphone" placeholder="+91 XXXXX XXXXX" required></div></div>
+                    <div class="f-group"><label>I'm Looking For</label><select id="fint"><option value="">Select an option</option><option>Build a House / Construction</option><option>Renovation / Remodeling</option><option>Interior Design</option><option>Buy a Plot in Solan</option><option>Buy a Flat / Apartment</option><option>Buy a Villa / House</option><option>Commercial Property</option><option>Sell My Property</option><option>Something Else</option></select></div>
+                    <div class="f-group"><label>Your Message</label><textarea id="fmsg" placeholder="Tell us about your dream project..." rows="3"></textarea></div>
+                    <button type="submit" class="f-submit">Send &amp; Get Free Consultation &#8594;</button>
+                </form>
+                <div id="formOk"><div class="check">&#9989;</div><h3>Message Sent!</h3><p>We'll get back within hours. Thank you!</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+    <div class="foot-inner">
+        <div class="foot-grid">
+            <div class="foot-brand"><div class="f-logo">RK Mehta Group</div><p>Solan's most trusted name in construction and real estate. Building dreams in the divine hills of Himachal Pradesh for 20+ years.</p></div>
+            <div><h4>Quick Links</h4><ul class="fl"><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#properties">Properties</a></li><li><a href="#gallery">Projects</a></li><li><a href="#contact">Contact</a></li></ul></div>
+            <div><h4>Services</h4><ul class="fl"><li><a href="#services">Construction</a></li><li><a href="#services">Renovation</a></li><li><a href="#services">Property Buying</a></li><li><a href="#services">Investment</a></li></ul></div>
+            <div><h4>Contact</h4><ul class="fc"><li>&#128222; <a href="tel:+919816008127">+91 98160 08127</a></li><li>&#128205; Solan, Himachal Pradesh</li><li>&#128172; <a href="https://wa.me/919816008127" target="_blank" rel="noopener">WhatsApp Us</a></li></ul></div>
+        </div>
+        <div class="foot-bottom"><span>&copy; 2026 RK Mehta Constructions &amp; Solan Property Consultant</span><span>&#128591; Made with love in Solan</span></div>
+    </div>
+</footer>
+
+<!-- ═══ FLOATS ═══ -->
+<div class="fl-wa"><a href="https://wa.me/919816008127?text=Hi%2C%20I%20found%20your%20website." target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a></div>
+<div class="fl-call"><a href="tel:+919816008127"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.72 11.72 0 003.66.59 1 1 0 011 1v3.6a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.6a1 1 0 011 1 11.72 11.72 0 00.59 3.66 1 1 0 01-.24 1.01l-2.33 2.12z"/></svg> Call Now</a></div>
+
+<script>
+const cursor=document.getElementById('cursor');
+document.addEventListener('mousemove',e=>{cursor.style.left=e.clientX-10+'px';cursor.style.top=e.clientY-10+'px'});
+document.querySelectorAll('a,button,.bento-card,.prop-card,.test-card,.why-card,.hero-glass').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('active'));el.addEventListener('mouseleave',()=>cursor.classList.remove('active'))});
+
+window.addEventListener('load',()=>setTimeout(()=>document.getElementById('loader').classList.add('done'),1600));
+
+window.addEventListener('scroll',()=>{
+    const h=document.documentElement;
+    const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
+    document.getElementById('scrollProgress').style.width=pct+'%';
+    document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);
+});
+
+document.getElementById('burger').addEventListener('click',()=>document.getElementById('navMenu').classList.toggle('open'));
+document.querySelectorAll('.nav-menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navMenu').classList.remove('open')));
+
+const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:0.06});
+document.querySelectorAll('.rv,.rv-l,.rv-r').forEach(el=>ro.observe(el));
+
+let counted=false;
+const co=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting&&!counted){counted=true;
+document.querySelectorAll('.h-stat-num[data-target]').forEach(el=>{
+    const t=+el.dataset.target;const suffix=t===100?'%':'+';let c=0;const step=Math.max(1,Math.ceil(t/60));
+    const timer=setInterval(()=>{c+=step;if(c>=t){c=t;clearInterval(timer)}el.textContent=c+suffix},25);
+});}})},{threshold:0.3});
+const hs=document.querySelector('.hero-stats');if(hs)co.observe(hs);
+
+function submitForm(e){e.preventDefault();const n=document.getElementById('fname').value;const p=document.getElementById('fphone').value;const i=document.getElementById('fint').value;const m=document.getElementById('fmsg').value;const msg=`Hi Rakesh ji, I am ${n}.%0APhone: ${p}%0ALooking for: ${i}%0AMessage: ${m}%0A%0A(From website)`;document.getElementById('cForm').style.display='none';document.getElementById('formOk').style.display='block';setTimeout(()=>window.open('https://wa.me/919816008127?text='+msg,'_blank'),500);setTimeout(()=>{document.getElementById('cForm').style.display='block';document.getElementById('formOk').style.display='none';document.getElementById('cForm').reset()},5000)}
+</script>
+</body>
+</html>
