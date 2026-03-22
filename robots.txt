@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rkmehtagroup.com/sitemap.xml
